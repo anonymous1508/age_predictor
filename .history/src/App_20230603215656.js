@@ -5,12 +5,12 @@ import Axios from "axios";
 
 function App() {
   const [name,setname]=useState("");
-  const[predictedage,setpredictedage]=useState(null)
+  const[predictedage,setpredictedage]=useState("")
   const Fetchdata= ()=>{
 
    
     Axios.get(`https://api.agify.io?name=${name}`).then((res)=>{
-      setpredictedage(res.data);
+      setpredictedage(res.data.age);
     });
   }
   return (

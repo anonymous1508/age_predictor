@@ -10,7 +10,7 @@ function App() {
 
    
     Axios.get(`https://api.agify.io?name=${name}`).then((res)=>{
-      setpredictedage(res.data);
+      setpredictedage(res.data.age);
     });
   }
   return (
